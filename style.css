@@ -1,0 +1,112 @@
+body, html {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/*Themes*/
+.dark-theme {
+    --dark1: #090909;
+    --dark2: #181818;
+    --dark3: #373737;
+    --light1: #ffffff;
+    --light2: #f3f3f3;
+    --light3: #e1e1e1;
+}
+.borderWhite {
+    border: 1px solid white;
+    height: 100%;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    padding-left: 10px;
+    color: var(--light3);
+    height: 5%;
+    background-color: var(--dark2);
+    border-image: url(./media/download2.svg) 64;
+    border-image-width: 0 0 2px 0;
+    border-style: solid;
+    align-items: center;
+    font-family: 'gravitybold';
+}
+
+.closeBtn {
+    display: flex;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: var(--dark3);
+    right: 5px;
+    z-index: 10;
+    margin-left: auto;    
+    justify-content: center;
+    align-items: center;
+    border-image: url(./media/download.svg) 64 / 2px;
+    border-style: solid;
+    font-size: 10px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: var(--dark1);
+    padding-inline: 10%;
+    padding-block: 10%;
+}
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: var(--dark1);
+}
+.div3 {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: var(--dark1);
+}
+
+.clockWindow {
+    display: flex;
+    flex-flow: column;
+    background-color: var(--dark3);
+    height: 100%;
+    border-style: solid;
+    border-width: 2px 2px;
+    border-image: url(./media/download.svg) 64 / 2px;
+    overflow: hidden;
+}
+
+.clockWrapper {
+    position: relative;
+    display: flex;
+    margin: 7px;
+    background-color: var(--light1);
+    height: 100%;
+    border-style: solid;
+    border-width: 2px 2px;
+    border-image: url(./media/download2.svg) 64 / 2px;
+    box-sizing: content-box;
+    font-family: 'gravityregular';
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#displaySubject {
+    font-size: 100px;
+    font-family: 'gravitybold';
+    font-style: italic;
+    text-shadow: 18px -8px 0px rgba(206,89,55,0), 2px 2px 0px #E933FF, -2px -2px 0px #00FFFD;
+}
+
+#clock { 
+    font-size: 30px;
+}
+
