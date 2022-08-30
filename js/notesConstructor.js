@@ -4,7 +4,9 @@ export default class notesConstructor {
         this.onNoteEdit = onNoteEdit;
         this.root.innerHTML =`
             <input type="text" class="notes-title" placeholder="Notes Title">
-            <textarea class="notes-body">Start typing...</textarea>
+            <hr class="notesHr">
+            <textarea class="notes-body" id="notesBody">Start typing...</textarea>
+            <p id="demo"></p>
         `;
 
         const inpTitle = this.root.querySelector(".notes-title");

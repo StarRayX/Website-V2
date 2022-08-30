@@ -32,7 +32,7 @@ body, html {
     display: flex;
     padding-left: 10px;
     color: var(--light3);
-    height: 5%;
+    height: 42px;
     background-color: var(--dark2);
     border-image: url(./media/download2.svg) 64;
     border-image-width: 0 0 2px 0;
@@ -70,6 +70,10 @@ body, html {
 .div3 {
     grid-area: 2 / 2 / 3 / 3;
     background-color: var(--dark1);
+    
+    padding-inline: 10%;
+    padding-block-end: 10%;
+    padding-block-start: 5%;
 }
 
 .clockWindow {
@@ -110,3 +114,48 @@ body, html {
     font-size: 30px;
 }
 
+.notesContainer {
+    position: relative;
+    display: flex;
+    margin: 7px;
+    background-color: var(--light1);
+    height: 100%;
+    border-style: solid;
+    border-width: 2px 2px;
+    border-image: url(./media/download2.svg) 64 / 2px;
+    box-sizing: content-box;
+    font-family: 'gravityregular';
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.notes-title {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 30px;
+    font-family: 'Consolas', sans-serif;
+    font-weight: bold;
+}
+.notes-body {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 20px;
+    font-family: 'Consolas', sans-serif;
+    box-sizing: border-box;
+}
+
+.notesHr {
+    width:100%;
+    text-align:left;
+    margin-left:0;
+    margin: 0%;
+}

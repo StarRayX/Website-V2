@@ -1,5 +1,5 @@
-import notesConstructor from "./notesConstructor";
-import notesAPI from "./notesAPI";
+import notesConstructor from "./notesConstructor.js";
+import notesAPI from "./notesAPI.js";
 
 export default class app {
     constructor(root) {
@@ -20,21 +20,26 @@ export default class app {
         }
     }
 
-    _setNotes() {
+    _setNotes(notes) {
         this.notes = notes;
-        this.view.updateNoteList(notes);
     }
 
     _setActiveNote(note) {
         this.activeNote = note;
-        this.view.updateActiveNote();
+        this.view.updateActiveNote(note);
     }
 
     _handlers() {
         return {
             onNoteEdit: (title, body) => {
-                console.log(title, body);
+                notesAPI.saveNote({
+                    title,
+                    body
+                });
+
+                this._refreshNotes();
             }
+            
         }
     }
 }

@@ -132,3 +132,11 @@ function showTime() {
 
 
 update();
+
+//notepad
+
+/* setInterval(() => {
+    var textid = document.getElementById("notesBody").value;
+    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    document.getElementById("demo").innerHTML = textid.replace(exp,"<a href='$1'>$1</a>");
+}, 1000); */

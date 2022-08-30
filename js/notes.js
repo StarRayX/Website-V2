@@ -1,5 +1,5 @@
-import app from "./app.js";
+import App from "./app.js";
 
 const root = document.getElementById('notes-preview');
-const app = new app(root);
+const app = new App(root);
 

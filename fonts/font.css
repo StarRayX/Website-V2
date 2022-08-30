@@ -7,15 +7,39 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'gravityregular';
     src: url('gravityregular5-webfont.woff2') format('woff2'),
          url('gravityregular5-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
+}
+@font-face {
+    font-family: 'Consolas';
+    src: url('consolas/CONSOLA.TTF') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Consolas';
+    src: url('consolas/CONSOLAB.TTF') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Consolas';
+    src: url('consolas/CONSOLAZ.TTF') format('ttf');
+    font-weight: bold;
+    font-style: italic;
+
+}
+@font-face {
+    font-family: 'Consolas';
+    src: url('consolas/CONSOLAI.TTF') format('ttf');
+    font-weight: normal;
+    font-style: italic;
 
 }
