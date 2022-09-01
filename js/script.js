@@ -6,69 +6,67 @@
     var currentTime
     var weekday;
     var displayDay;
+    var timeInMinutes;
 
 //schedule arrays
 var teacher1 = [
-    monday = ['waw1','waw2','waw3'],
-    tuesday = ['wew','wew2','wew3'],
-    wednesday = ['wiw','wiw2','wiw3'],
-    thursday = ['wow','wow2','wow3'],
-    friday = ['wuw','wuw2','wuw3'],
+    sunday = [],
+    monday = ['Class Starting Soon','HUM','No Class','11A - Empowerment Technologies','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    tuesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    wednesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    thursday = ['Class Starting Soon','waw1','waw2','11A - Empowerment Technologies','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    friday = ['Class Starting Soon','waw1','waw2','11A - Empowerment Technologies','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    saturday = [],
 ];
 var teacher2 = [
-    monday = ['wawa1','wawa2','wawa3'],
-    tuesday = ['wewa','wewa2','wewa3'],
-    wednesday = ['wiwa','wiwa2','wiwa3'],
-    thursday = ['wowa','wowa2','wowa3'],
-    friday = ['wuwa','wuwa2','wuwa3'],
+    sunday = [],
+    monday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    tuesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    wednesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    thursday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    friday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    saturday = [],
 ];
 var teacher3 = [
-    monday = ['wawb1','wawb2','wawb3'],
-    tuesday = ['wewb','wewb2','wewb3'],
-    wednesday = ['wiwb','wiwb2','wiwb3'],
-    thursday = ['wowb','wowb2','wowb3'],
-    friday = ['wuwb','wuwb2','wuwb3'],
+    sunday = [],
+    monday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    tuesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    wednesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    thursday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    friday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    saturday = [],
 ];
 var teacher4 = [
-    monday = ['wawc1','waw2c','waw3c'],
-    tuesday = ['wewc','wew2c','wew3c'],
-    wednesday = ['wiwc','wiw2c','wiw3c'],
-    thursday = ['wowc','wow2c','wow3c'],
-    friday = ['wuwc','wuw2c','wuw3c'],
+    sunday = [],
+    monday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    tuesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    wednesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    thursday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    friday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    saturday = [],
 ];
 var teacher5 = [
-    monday = ['wawd1','wawd2','wawd3'],
-    tuesday = ['wewd','wewd2','wewd3'],
-    wednesday = ['wiwd','wiwd2','wiwd3'],
-    thursday = ['wowd','wowd2','wowd3'],
-    friday = ['wuwd','wuwd2','wuwd3'],
+    sunday = [],
+    monday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    tuesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    wednesday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    thursday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    friday = ['Class Starting Soon','waw1','waw2','waw3','waw1','waw2','waw3','waw1','waw2','waw3','wow'],
+    saturday = [],
 ];
 
 var teacher = teacher1;
 
-//update the display
-function update() {
-    document.getElementById("displaySubject").innerHTML = subDisplay;
-    
-};
+
 //subDisplay[time.getDay()][period]
 let subDisplay;
 let period = 0;
-
-//change period
-function pChange() {
-    period++;
-    update();
-    return period;
-};
 
 //teachers
 function setTeacher(inpTeacher) {
     teacher = inpTeacher;
     return teacher;
 }
-
-
 
 //how to make themes: 
 //1. create css classes of the themes with css color variables
@@ -101,37 +99,97 @@ function showTime() {
     currentTime = hour + ":" 
             + min + " "+ am_pm;
     
-
-    weekday = new Array(7);
-        weekday[0] = "Sunday";
-        weekday[1] = "Monday";
-        weekday[2] = "Tuesday";
-        weekday[3] = "Wednesday";
-        weekday[4] = "Thursday";
-        weekday[5] = "Friday";
-        weekday[6] = "Saturday";
-
-    displayDay = weekday[time.getDay()];
+    timeInMinutes = 560;
     
+    switch (true) {
+        case timeInMinutes < 450:
+            subDisplay = `Class Starting Soon...`
+            update();
+            break;
+
+        case 450 <= timeInMinutes && timeInMinutes < 465: //7:30-7:45
+            period = 1;
+            update();
+            break;
+        
+        case 465 <= timeInMinutes && timeInMinutes < 525: //7:45-8:40
+            period = 2;
+            update();
+            break;
+        
+        case 525 <= timeInMinutes && timeInMinutes < 580: //8:45-9:40
+            period = 3;
+            update();
+            break;
+        
+        case 580 <= timeInMinutes && timeInMinutes < 600: //9:40-10:00
+            period = 4;
+            update();
+            break;
+        
+        case 600 <= timeInMinutes && timeInMinutes < 660: //10:00-10:55
+            period = 5;
+            update();
+            break;
+        
+        case 660 <= timeInMinutes && timeInMinutes < 715 && time.getDay() != 5: //11:00-11:55
+            period = 6;
+            update();
+            break;
+        
+        case 715 <= timeInMinutes && timeInMinutes < 750 && time.getDay() != 5: //11:55-12:30
+            period = 7;
+            update();
+            break;
+        
+        case 750 <= timeInMinutes && timeInMinutes < 810 && time.getDay() != 5: //12:30-1:25
+            period = 8;
+            update();
+            break;
+        
+        case 810 <= timeInMinutes && timeInMinutes < 865 && time.getDay() != 5: //1:30-2:25
+            period = 9;
+            update();
+            break;
+        
+        case 865 <= timeInMinutes && timeInMinutes < 870 && time.getDay() != 5: //2:25-2:30
+            period = 10;
+            update();
+            break;
+        
+        case 870 <= timeInMinutes && time.getDay() != 5: //2:30 onwards
+            period = 11;
+            subDisplay = 'Class Over';
+            update();
+            break;
+        
+    }
     //change day
     if (teacher) {
         subDisplay = teacher[time.getDay()][period];
     } else {
         subDisplay = 'Select a user';
     }
-    if (hour == 2 && period != 1) {
-        pChange();
-    }
 
     update();
     document.getElementById("clock")
             .innerHTML = currentTime;
+
     
-
+    return timeInMinutes, subDisplay;
 }
-
+//update the display
+function update() {
+    document.getElementById("displaySubject").innerHTML = subDisplay;
+    
+};
 
 update();
+
+
+
+
+
 
 //notepad
 

@@ -104,10 +104,11 @@ body, html {
 }
 
 #displaySubject {
-    font-size: 100px;
+    font-size: 80px;
     font-family: 'gravitybold';
     font-style: italic;
     text-shadow: 18px -8px 0px rgba(206,89,55,0), 2px 2px 0px #E933FF, -2px -2px 0px #00FFFD;
+    text-align: center;
 }
 
 #clock { 
