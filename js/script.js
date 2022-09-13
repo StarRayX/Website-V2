@@ -65,14 +65,12 @@ let period = 0;
 //teachers
 function selectUser() {
     if (document.getElementById('user_teacher1').checked) {
-        teacher = teacher1
+        localStorage.setItem("user", "teacher1");
     } else if (document.getElementById('user_teacher2').checked) {
-        teacher = teacher2
+        localStorage.setItem("user", "teacher2");
     } else if (document.getElementById('user_teacher3').checked) {
-        teacher = teacher3
-    };
-    return teacher;
-    
+        localStorage.setItem("user", "teacher3");
+    };    
 }
 
 
@@ -187,7 +185,23 @@ function showTime() {
     document.getElementById("clock")
             .innerHTML = currentTime;
 
+    let user = JSON.parse(localStorage.getItem("user") || "");
     
+    switch (user) {
+        case "teacher1":
+            teacher = teacher1
+            break;
+        case "teacher2":
+            teacher = teacher2
+            break;
+        case "teacher3":
+            teacher = teacher3
+            break;
+    
+        default:
+            break;
+    }
+
     return timeInMinutes, subDisplay;
 }
 //update the display
