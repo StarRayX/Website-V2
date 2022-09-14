@@ -47,7 +47,7 @@ var teacher4 = [
 ];
 var teacher5 = [
     sunday =    [],
-   monday =     ['Class Starting Soon', 'HUM',                              'No Class',     '11A E-Tech',   'Healthy Tidbits', 'RHGP',     '10E',             'Lunch Break', '11C E-Tech', '11E E-Tech', 'Staggered Dismissal'],
+    monday =    ['Class Starting Soon', 'HUM',                              'No Class',     '11A E-Tech',   'Healthy Tidbits', 'RHGP',     '10E',             'Lunch Break', '11C E-Tech', '11E E-Tech', 'Staggered Dismissal'],
     tuesday =   ['Class Starting Soon', 'DEAR',                             '10D',          'No Class',     'Healthy Tidbits', '10C',      'No Class',        'Lunch Break', '8B',         '11C E-Tech', 'Staggered Dismissal'],
     wednesday = ['Class Starting Soon', 'Aqsa Khamsat Ashar',               '9A',           '8C',           'Healthy Tidbits', 'No Class', '11B E-Tech',      'Lunch Break', '11E E-Tech', 'No Class',   'Staggered Dismissal'],
     thursday =  ['Class Starting Soon', 'Independent Reading and Learning', '11A E-Tech',   '10A',          'Healthy Tidbits', '9C',       '10B',             'Lunch Break', '9B',         '9D',         'Staggered Dismissal'],
@@ -185,7 +185,7 @@ function showTime() {
     document.getElementById("clock")
             .innerHTML = currentTime;
 
-    let user = JSON.parse(localStorage.getItem("user") || "");
+    let user = localStorage.getItem("user") || "";
     
     switch (user) {
         case "teacher1":
@@ -207,7 +207,6 @@ function showTime() {
 //update the display
 function update() {
     document.getElementById("displaySubject").innerHTML = subDisplay;
-    
 };
 
 update();
