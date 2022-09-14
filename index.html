@@ -28,13 +28,15 @@
             <!-- <div id="todo-list">y</div> -->
             <div class="clockWindow">
                 <div class="title">Select User <div class="closeBtn">x</div> </div>
-                <div>
-                    <label><input type="radio" name="User" id="user_teacher1" value="teacher1"/>Sir Khristian</label>
+                <div class="userSelectWrapper">
+                    <form>
+                    <label><input type="radio" name="User" id="user_teacher1" value="teacher1" class="radioBox"/><span>Sir Khristian</span></label>
                     <br>
-                    <label><input type="radio" name="User" id="user_teacher2" value="teacher2"/>Ms. Acel</label>
+                    <label><input type="radio" name="User" id="user_teacher2" value="teacher2" class="radioBox"/><span>Ms. Acel</span></label>
                     <br>
-                    <label><input type="radio" name="User" id="user_teacher3" value="teacher3"/>Ms. Gemma</label>
-                    <button onclick="selectUser()">Click me</button>
+                    <label><input type="radio" name="User" id="user_teacher3" value="teacher3" class="radioBox"/><span>Ms. Gemma</span></label>
+                    </form>
+                    <button onclick="selectUser()">SELECT</button>
                 </div>
             </div>
         </div>

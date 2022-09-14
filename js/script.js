@@ -9,6 +9,8 @@
     var timeInMinutes;
 
 //schedule arrays
+
+
 var teacher1 = [ // Sir Khristian
     sunday =    [],
     monday =    ['Class Starting Soon', 'HUM',                              'No Class',     '11A E-Tech',   'Healthy Tidbits', 'RHGP',     '10E',             'Lunch Break', '11C E-Tech', '11E E-Tech', 'Staggered Dismissal',  'Class Over'],
@@ -20,37 +22,37 @@ var teacher1 = [ // Sir Khristian
 ];
 var teacher2 = [ // Ms Acel
     sunday =    [],
-    monday =    ['Class Starting Soon', 'HUM',                              'No Class', '10C',      'Healthy Tidbits', 'RHGP', '10A',      'Lunch Break', '10D', '9E', 'Staggered Dismissal'],
-    tuesday =   ['Class Starting Soon', 'DEAR',                             '10E',      'No Class', 'Healthy Tidbits', '10D',  '9E',       'Lunch Break', '10B', '9C', 'Staggered Dismissal'],
-    wednesday = ['Class Starting Soon', 'Aqsa Khamsat Ashar',               '10E',      '10C',      'Healthy Tidbits', '10A',  'No Class', 'Lunch Break', '10B', '9C', 'Staggered Dismissal'],
-    thursday =  ['Class Starting Soon', 'Independent Reading and Learning', '10B',      '10C',      'Healthy Tidbits', '10E',  'No Class', 'Lunch Break', '9C',  '9E', 'Staggered Dismissal'],
-    friday =    ['Class Starting Soon', 'Adviser\'s Period',                'No Class', '10A',      'Healthy Tidbits', '10D',  'Adviser\'s time'],
+    monday =    ['Class Starting Soon', 'HUM',                              'No Class', '10C',      'Healthy Tidbits', 'RHGP', '10A',      'Lunch Break', '10D', '9E', 'Staggered Dismissal', 'Class Over'],
+    tuesday =   ['Class Starting Soon', 'DEAR',                             '10E',      'No Class', 'Healthy Tidbits', '10D',  '9E',       'Lunch Break', '10B', '9C', 'Staggered Dismissal', 'Class Over'],
+    wednesday = ['Class Starting Soon', 'Aqsa Khamsat Ashar',               '10E',      '10C',      'Healthy Tidbits', '10A',  'No Class', 'Lunch Break', '10B', '9C', 'Staggered Dismissal', 'Class Over'],
+    thursday =  ['Class Starting Soon', 'Independent Reading and Learning', '10B',      '10C',      'Healthy Tidbits', '10E',  'No Class', 'Lunch Break', '9C',  '9E', 'Staggered Dismissal', 'Class Over'],
+    friday =    ['Class Starting Soon', 'Adviser\'s Period',                'No Class', '10A',      'Healthy Tidbits', '10D',  'Adviser\'s time', 'Class Over'],
     saturday =  [],
 ];
 var teacher3 = [ // Ms Gemma
     sunday =    [],
-    monday =    ['Class Starting Soon', 'HUM',                              '10D AP',  '10E AP',   'Healthy Tidbits', 'RHGP',   'No Class', 'Lunch Break', '10B AP',   'No Class', 'Staggered Dismissal'],
-    tuesday =   ['Class Starting Soon', 'DEAR',                             '10B AP',  '10E EsP',  'Healthy Tidbits', '10A AP', '7B AP',    'Lunch Break', '10C AP',   '7B EsP',   'Staggered Dismissal'],
-    wednesday = ['Class Starting Soon', 'Aqsa Khamsat Ashar',               '10B EsP', 'No Class', 'Healthy Tidbits', '10C AP', '7B AP',    'Lunch Break', 'No Class', '7A AP',    'Staggered Dismissal'],
-    thursday =  ['Class Starting Soon', 'Independent Reading and Learning', '7A EsP',  'No Class', 'Healthy Tidbits', '10D AP', '10D EsP',  'Lunch Break', '10E AP',   '7A AP',    'Staggered Dismissal'],
+    monday =    ['Class Starting Soon', 'HUM',                              '10D AP',  '10E AP',   'Healthy Tidbits', 'RHGP',   'No Class', 'Lunch Break', '10B AP',   'No Class', 'Staggered Dismissal', 'Class Over'],
+    tuesday =   ['Class Starting Soon', 'DEAR',                             '10B AP',  '10E EsP',  'Healthy Tidbits', '10A AP', '7B AP',    'Lunch Break', '10C AP',   '7B EsP',   'Staggered Dismissal', 'Class Over'],
+    wednesday = ['Class Starting Soon', 'Aqsa Khamsat Ashar',               '10B EsP', 'No Class', 'Healthy Tidbits', '10C AP', '7B AP',    'Lunch Break', 'No Class', '7A AP',    'Staggered Dismissal', 'Class Over'],
+    thursday =  ['Class Starting Soon', 'Independent Reading and Learning', '7A EsP',  'No Class', 'Healthy Tidbits', '10D AP', '10D EsP',  'Lunch Break', '10E AP',   '7A AP',    'Staggered Dismissal', 'Class Over'],
     friday =    ['Class Starting Soon', 'Adviser\'s Period',                '10C EsP', 'No Class', 'Healthy Tidbits', '10A AP', 'Adviser\'s time'],
     saturday =  [],
 ];
 var teacher4 = [
     sunday =    [],
-    monday =    ['Class Starting Soon', 'HUM',                              'No Class',     '11A E-Tech',   'Healthy Tidbits', 'RHGP',     '10E',             'Lunch Break', '11C E-Tech', '11E E-Tech', 'Staggered Dismissal'],
-    tuesday =   ['Class Starting Soon', 'DEAR',                             '10D',          'No Class',     'Healthy Tidbits', '10C',      'No Class',        'Lunch Break', '8B',         '11C E-Tech', 'Staggered Dismissal'],
-    wednesday = ['Class Starting Soon', 'Aqsa Khamsat Ashar',               '9A',           '8C',           'Healthy Tidbits', 'No Class', '11B E-Tech',      'Lunch Break', '11E E-Tech', 'No Class',   'Staggered Dismissal'],
-    thursday =  ['Class Starting Soon', 'Independent Reading and Learning', '11A E-Tech',   '10A',          'Healthy Tidbits', '9C',       '10B',             'Lunch Break', '9B',         '9D',         'Staggered Dismissal'],
+    monday =    ['Class Starting Soon', 'HUM',                              'No Class',     '11A E-Tech',   'Healthy Tidbits', 'RHGP',     '10E',             'Lunch Break', '11C E-Tech', '11E E-Tech', 'Staggered Dismissal', 'Class Over'],
+    tuesday =   ['Class Starting Soon', 'DEAR',                             '10D',          'No Class',     'Healthy Tidbits', '10C',      'No Class',        'Lunch Break', '8B',         '11C E-Tech', 'Staggered Dismissal', 'Class Over'],
+    wednesday = ['Class Starting Soon', 'Aqsa Khamsat Ashar',               '9A',           '8C',           'Healthy Tidbits', 'No Class', '11B E-Tech',      'Lunch Break', '11E E-Tech', 'No Class',   'Staggered Dismissal', 'Class Over'],
+    thursday =  ['Class Starting Soon', 'Independent Reading and Learning', '11A E-Tech',   '10A',          'Healthy Tidbits', '9C',       '10B',             'Lunch Break', '9B',         '9D',         'Staggered Dismissal', 'Class Over'],
     friday =    ['Class Starting Soon', 'Adviser\'s Period',                '11B E-Tech',   '9E',           'Healthy Tidbits', '8A',       'Adviser\'s time'],
     saturday =  [],
 ];
 var teacher5 = [
     sunday =    [],
-    monday =    ['Class Starting Soon', 'HUM',                              'No Class',     '11A E-Tech',   'Healthy Tidbits', 'RHGP',     '10E',             'Lunch Break', '11C E-Tech', '11E E-Tech', 'Staggered Dismissal'],
-    tuesday =   ['Class Starting Soon', 'DEAR',                             '10D',          'No Class',     'Healthy Tidbits', '10C',      'No Class',        'Lunch Break', '8B',         '11C E-Tech', 'Staggered Dismissal'],
-    wednesday = ['Class Starting Soon', 'Aqsa Khamsat Ashar',               '9A',           '8C',           'Healthy Tidbits', 'No Class', '11B E-Tech',      'Lunch Break', '11E E-Tech', 'No Class',   'Staggered Dismissal'],
-    thursday =  ['Class Starting Soon', 'Independent Reading and Learning', '11A E-Tech',   '10A',          'Healthy Tidbits', '9C',       '10B',             'Lunch Break', '9B',         '9D',         'Staggered Dismissal'],
+    monday =    ['Class Starting Soon', 'HUM',                              'No Class',     '11A E-Tech',   'Healthy Tidbits', 'RHGP',     '10E',             'Lunch Break', '11C E-Tech', '11E E-Tech', 'Staggered Dismissal', 'Class Over'],
+    tuesday =   ['Class Starting Soon', 'DEAR',                             '10D',          'No Class',     'Healthy Tidbits', '10C',      'No Class',        'Lunch Break', '8B',         '11C E-Tech', 'Staggered Dismissal', 'Class Over'],
+    wednesday = ['Class Starting Soon', 'Aqsa Khamsat Ashar',               '9A',           '8C',           'Healthy Tidbits', 'No Class', '11B E-Tech',      'Lunch Break', '11E E-Tech', 'No Class',   'Staggered Dismissal', 'Class Over'],
+    thursday =  ['Class Starting Soon', 'Independent Reading and Learning', '11A E-Tech',   '10A',          'Healthy Tidbits', '9C',       '10B',             'Lunch Break', '9B',         '9D',         'Staggered Dismissal', 'Class Over'],
     friday =    ['Class Starting Soon', 'Adviser\'s Period',                '11B E-Tech',   '9E',           'Healthy Tidbits', '8A',       'Adviser\'s time'],
     saturday =  [],
 ];
@@ -63,6 +65,8 @@ let subDisplay;
 let period = 0;
 
 //teachers
+
+
 function selectUser() {
     if (document.getElementById('user_teacher1').checked) {
         localStorage.setItem("user", "teacher1");
@@ -74,6 +78,7 @@ function selectUser() {
 }
 
 
+
 //how to make themes: 
 //1. create css classes of the themes with css color variables
 //2. array for the list of theme names, and variable for index number
@@ -83,6 +88,7 @@ function selectUser() {
 //display time
 setInterval(showTime, 1000);
 function showTime() {
+    var user = localStorage.getItem("user") || "";
     time = new Date();
     hour = time.getHours();
     min = time.getMinutes();
@@ -185,11 +191,12 @@ function showTime() {
     document.getElementById("clock")
             .innerHTML = currentTime;
 
-    let user = localStorage.getItem("user") || "";
+    
     
     switch (user) {
         case "teacher1":
-            teacher = teacher1
+            teacher = teacher1;
+            
             break;
         case "teacher2":
             teacher = teacher2
@@ -202,11 +209,29 @@ function showTime() {
             break;
     }
 
-    return timeInMinutes, subDisplay;
+    return timeInMinutes, subDisplay, user;
 }
 //update the display
 function update() {
     document.getElementById("displaySubject").innerHTML = subDisplay;
+};
+
+switch (localStorage.getItem("user") || "") {
+    case "teacher1":
+        check('user_teacher1');
+        break;
+    case "teacher2":
+        check('user_teacher2');
+        break;
+    case "teacher3":
+        check('user_teacher3');
+        break;
+
+    default:
+        break;
+}
+function check(id) {
+    document.getElementById(`${id}`).checked = true;
 };
 
 update();
